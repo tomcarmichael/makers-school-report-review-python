@@ -55,3 +55,11 @@ Input:
         - concatenate `output` with `f'{key}: #{result_counts[key]}\n`
   
 - Return `output`
+
+## Cloning repo and running tests
+
+`git clone https://github.com/tomcarmichael/makers-school-report-review-python.git`
+
+`source venv/bin/activate`
+
+`pytest`
