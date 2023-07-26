@@ -1,10 +1,18 @@
 def school_report(results_string):
-    results = results_string.split(',')
+    results = results_string.split(', ')
 
     output = ''
 
+    result_counts = {}
+
     for result in results:
-        output += f'{result.strip()}: 1\n'
+        if result in result_counts.keys():
+            result_counts[result] += 1
+        else:
+            result_counts[result] = 1
+    
+    for key in result_counts:
+        output += f'{key}: {result_counts[key]}\n'
     
     return output.strip()
 
