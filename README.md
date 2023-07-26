@@ -50,5 +50,8 @@ Input:
 
 - Initialise an `output` variable to an empty string
   
-- For key and value in `result_counts`, concatenate `output` with `f'{key}: #{value}\n`
+- For key  in `result_counts`
+    - if `result_counts[key]` > 0
+        - concatenate `output` with `f'{key}: #{result_counts[key]}\n`
+  
 - Return `output`
