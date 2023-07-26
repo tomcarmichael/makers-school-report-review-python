@@ -3,3 +3,6 @@ def school_report(results_string):
         return 'Green: 1'
     elif results_string == 'Red':
         return 'Red: 1'
+    elif results_string == 'Amber':
+        return 'Amber: 1'
+

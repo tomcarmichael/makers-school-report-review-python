@@ -7,3 +7,7 @@ def test_school_report_result_1():
 def test_school_report_result_2():
     input = "Red"
     assert(school_report(input)) == 'Red: 1'
+
+def test_school_report_result_3():
+    input = "Amber"
+    assert(school_report(input)) == 'Amber: 1'
