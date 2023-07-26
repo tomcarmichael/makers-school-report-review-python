@@ -1,6 +1,13 @@
 def school_report(results_string):
+    results = results_string.split(',')
 
-    return f'{results_string}: 1'
+    output = ''
+
+    for result in results:
+        output += f'{result.strip()}: 1\n'
+    
+    return output.strip()
+
 
     # results_list = results_string.split(',')
 
