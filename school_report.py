@@ -6,10 +6,12 @@ def school_report(results_string):
     result_counts = {}
 
     for result in results:
-        if result in result_counts.keys():
-            result_counts[result] += 1
+        formatted_result = result.capitalize()
+
+        if formatted_result in result_counts.keys():
+            result_counts[formatted_result] += 1
         else:
-            result_counts[result] = 1
+            result_counts[formatted_result] = 1
     
     for key in result_counts:
         output += f'{key}: {result_counts[key]}\n'

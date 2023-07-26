@@ -24,3 +24,15 @@ def test_school_report_result_5():
 def test_school_report_result_6():
     input = "Green, Green, Amber, Red, Green"
     assert(school_report(input)) == 'Green: 3\nAmber: 1\nRed: 1'
+
+def test_school_report_result_6():
+    input = "Green, Green, Amber"
+    assert(school_report(input)) == 'Green: 2\nAmber: 1'
+
+def test_school_report_result_6():
+    input = "Green, Green, Red, Red, Red"
+    assert(school_report(input)) == 'Green: 2\nRed: 3'
+
+def test_school_report_result_6():
+    input = "GREEN, green, rEd, reD, Red"
+    assert(school_report(input)) == 'Green: 2\nRed: 3'
