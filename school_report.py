@@ -1,6 +1,10 @@
 def school_report(results_string):
     results = results_string.split(', ')
 
+    # Handle input without spaces after commas
+    if len(results) == 1:
+        results = results[0].split(',')
+
     output = ''
 
     grades = ('Green', 'Amber', 'Red')

@@ -2,41 +2,46 @@ from school_report import school_report
 import pytest
 
 def test_school_report_result_1():
-    input = "Green"
+    input = 'Green'
     assert(school_report(input)) == 'Green: 1'
 
 def test_school_report_result_2():
-    input = "Red"
+    input = 'Red'
     assert(school_report(input)) == 'Red: 1'
 
 def test_school_report_result_3():
-    input = "Amber"
+    input = 'Amber'
     assert(school_report(input)) == 'Amber: 1'
 
 def test_school_report_result_4():
-    input = "Green, Amber"
+    input = 'Green, Amber'
     assert(school_report(input)) == 'Green: 1\nAmber: 1'
 
 def test_school_report_result_5():
-    input = "Green, Amber, Red"
+    input = 'Green, Amber, Red'
     assert(school_report(input)) == 'Green: 1\nAmber: 1\nRed: 1'
 
 def test_school_report_result_6():
-    input = "Green, Green, Amber, Red, Green"
+    input = 'Green, Green, Amber, Red, Green'
     assert(school_report(input)) == 'Green: 3\nAmber: 1\nRed: 1'
 
-def test_school_report_result_6():
-    input = "Green, Green, Amber"
+def test_school_report_result_7():
+    input = 'Green, Green, Amber'
     assert(school_report(input)) == 'Green: 2\nAmber: 1'
 
-def test_school_report_result_6():
-    input = "Green, Green, Red, Red, Red"
+def test_school_report_result_8():
+    input = 'Green, Green, Red, Red, Red'
     assert(school_report(input)) == 'Green: 2\nRed: 3'
 
-def test_school_report_result_6():
-    input = "GREEN, green, rEd, reD, Red"
+def test_school_report_result_9():
+    input = 'GREEN, green, rEd, reD, Red'
     assert(school_report(input)) == 'Green: 2\nRed: 3'
 
-def test_school_report_result_6():
-    input = "GREEN, green, rEd, reD, Red, Bob, steve"
+def test_school_report_result_10():
+    input = 'GREEN, green, rEd, reD, Red, Bob, steve'
     assert(school_report(input)) == 'Green: 2\nRed: 3\nUncounted: 2'
+
+def test_school_report_result_11():
+    input = 'Green,Dave,Whimsy'
+    assert(school_report(input)) == 'Green: 1\nUncounted: 2'
+    
