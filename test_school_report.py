@@ -45,3 +45,6 @@ def test_school_report_result_11():
     input = 'Green,Dave,Whimsy'
     assert(school_report(input)) == 'Green: 1\nUncounted: 2'
     
+def test_school_report_result_12():
+    input = 'Green,Dave,Whimsy,Red'
+    assert(school_report(input)) == 'Green: 1\nRed: 1\nUncounted: 2'
