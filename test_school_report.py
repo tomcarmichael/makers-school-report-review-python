@@ -36,3 +36,7 @@ def test_school_report_result_6():
 def test_school_report_result_6():
     input = "GREEN, green, rEd, reD, Red"
     assert(school_report(input)) == 'Green: 2\nRed: 3'
+
+def test_school_report_result_6():
+    input = "GREEN, green, rEd, reD, Red, Bob, steve"
+    assert(school_report(input)) == 'Green: 2\nRed: 3\nUncounted: 2'

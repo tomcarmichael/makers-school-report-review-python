@@ -3,15 +3,23 @@ def school_report(results_string):
 
     output = ''
 
+    grades = ('Green', 'Amber', 'Red')
+
     result_counts = {}
 
     for result in results:
         formatted_result = result.capitalize()
 
-        if formatted_result in result_counts.keys():
-            result_counts[formatted_result] += 1
+        if formatted_result in grades:
+            if formatted_result in result_counts.keys():
+                result_counts[formatted_result] += 1
+            else:
+                result_counts[formatted_result] = 1
         else:
-            result_counts[formatted_result] = 1
+            if 'Uncounted' in result_counts.keys():
+                result_counts['Uncounted'] += 1
+            else:
+                result_counts['Uncounted'] = 1
     
     for key in result_counts:
         output += f'{key}: {result_counts[key]}\n'
